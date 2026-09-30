@@ -2,52 +2,27 @@
 <p align="center">Muhammad Azhar nur Hafizh - 109082500049</p>
 
 ## Dasar Teori
-Bahasa C++ diciptakan oleh Bjarne Stroustrup di AT&T Bell Laboratories pada awal tahun 1980-an. Bahasa ini berawal dari bahasa C yang ditambahi fasilitas kelas, sehingga pada mulanya disebut "C with class", lalu disempurnakan dengan penambahan pembebanlebihan operator dan fungsi hingga menjadi C++ [3]. Pada praktikum ini, C++ dipakai sebagai bahasa untuk mempelajari dasar-dasar pemrograman sebelum masuk ke materi struktur data.
+Bahasa C++ diciptakan oleh Bjarne Stroustrup di AT&T Bell Laboratories pada awal tahun 1980-an [3]. Pada praktikum struktur data ini, C++ digunakan untuk mengimplementasikan berbagai konsep lanjutan seperti array multidimensi, manipulasi memori (pointer dan reference), fungsi, prosedur, serta modularitas program berbasis menu interaktif.
 
 ### A. Struktur Program dan Identifier<br/>
-Secara umum, program C++ tersusun dari beberapa bagian, yaitu pemanggilan *library* (`#include`), pendefinisian konstanta, pendefinisian tipe data bentukan, deklarasi variabel, deklarasi fungsi/prosedur, dan program utama `main()` [3]. Setiap pernyataan (*statement*) dalam C++ diakhiri dengan tanda titik koma (;).
-#### 1. Library
-Fungsi `cout` dan `cin` berada di *header file* `<iostream>`, sehingga harus dipanggil dengan `#include <iostream>` agar bisa dipakai [3].
-#### 2. Identifier
-*Identifier* adalah nama yang dipakai untuk variabel, konstanta, fungsi, atau objek lain. Aturannya: harus diawali huruf atau garis bawah (_), tidak boleh mengandung spasi, tidak boleh memakai operator aritmatika, dan bersifat *case sensitive* sehingga `panjang` berbeda dengan `Panjang` [3].
-#### 3. Fungsi main()
-`main()` adalah fungsi utama tempat program mulai dijalankan. Blok program ditulis di dalam kurung kurawal `{ }` dan biasanya diakhiri dengan `return 0;` [3].
+Array adalah struktur data yang terdiri dari kumpulan variabel dengan tipe data sama yang disimpan dalam alamat memori berdekatan.Array 1 Dimensi: Digunakan untuk menyimpan deretan data linier, seperti penyimpanan elemen arrA = {11, 8, 5, 7, 12, 26, 3, 54, 33, 55} pada program pencarian nilai minimum, maksimum, dan rata-rata.   Array 2 Dimensi (Matriks): Direpresentasikan dengan dua indeks [baris][kolom], yang sangat efisien untuk operasi aljabar matriks berukuran 3x3 seperti penjumlahan, pengurangan, dan perkalian matriks.
 
-### B. Tipe Data, Variabel, dan Konstanta<br/>
-Data dapat dinyatakan dalam bentuk variabel atau konstanta. Tipe data dasar yang dibahas pada modul adalah `char`, `int`, `long`, `float`, dan `double` [3].
-#### 1. Tipe Data Dasar
-`int` dipakai untuk bilangan bulat, `float` dan `double` untuk bilangan pecahan (real) dengan presisi tunggal dan ganda, sedangkan `char` untuk karakter [3].
-#### 2. Variabel
-Variabel dipakai untuk menyimpan nilai yang bisa berubah selama program berjalan. Bentuk deklarasinya adalah `tipe_data nama_variabel;` dan variabel juga bisa langsung diberi nilai awal, misalnya `int x = 20;` [3].
-#### 3. Konstanta
-Konstanta menyimpan nilai yang selalu tetap. Untuk mendeklarasikannya cukup menambahkan kata `const` di depan tipe data, misalnya `const float phi = 3.14;` [3].
+### B. Pointer dan Reference<br/>
+Manipulasi memori secara langsung sangat penting dalam struktur data untuk efisiensi pengoperasian data.Pointer (*): Variabel khusus yang menyimpan alamat memori dari variabel lain. Penggunaannya memerlukan operator alamat & untuk mengakses alamat memori dan operator dereferensi * untuk mengakses nilai yang ditunjuk.   Reference (&): Alias atau nama lain dari sebuah variabel yang sudah ada. Parameter reference memungkinkan fungsi mengubah nilai variabel asli secara langsung tanpa perlu menyalin nilainya (pass-by-reference)
 
 ### C. Input dan Output<br/>
-Operasi masukan dan keluaran pada C++ memakai `cin` dan `cout` dari *library* `iostream` [3].
-#### 1. Output dengan cout
-`cout` digunakan untuk mencetak data, baik teks maupun angka, dengan operator `<<`. Perintah `endl` atau `\n` dipakai untuk pindah ke baris baru [3].
-#### 2. Input dengan cin
-`cin` digunakan untuk membaca masukan dari *keyboard* dengan operator `>>`, dan nilainya langsung disimpan ke variabel yang dituju tanpa perlu penentu format seperti pada `printf()` [3].
-#### 3. Escape Sequence
-*Escape sequence* adalah karakter khusus yang diawali tanda `\`, contohnya `\n` untuk baris baru dan `\t` untuk tabulasi [3].
+Output dengan cout: Digunakan untuk mencetak teks, hasil perhitungan, atau menampilkan isi matriks/array ke layar dengan operator <<. Perintah endl atau karakter \n dipakai untuk ganti baris.
+Input dengan cin: Menggunakan operator >> untuk membaca data masukan dari keyboard, terutama untuk menerima input pilihan menu interaktif (switch-case).
+Escape Sequence: Karakter khusus seperti \t (tabulasi) digunakan untuk merapikan tampilan matriks 3x3 dalam format baris dan kolom.
 
 ### D. Operator<br/>
-Operator adalah simbol yang dipakai untuk melakukan suatu operasi atau manipulasi [3].
-#### 1. Operator Aritmatika
-Terdiri dari penjumlahan (+), pengurangan (-), perkalian (*), pembagian (/), dan sisa bagi (%). Untuk mengubah urutan pengerjaan dapat dipakai tanda kurung [3]. Pada pembagian dua bilangan bulat, hasilnya juga bilangan bulat sehingga bagian desimalnya dibuang.
-#### 2. Operator Relasi dan Logika
-Operator relasi (`==`, `!=`, `<`, `<=`, `>`, `>=`) dipakai untuk membandingkan dua nilai, sedangkan operator logika (`&&`, `||`, `!`) dipakai untuk menggabungkan atau membalik kondisi [3].
-#### 3. Operator Increment dan Decrement
-Operator `++` menambah nilai variabel sebanyak 1, sedangkan `--` menguranginya sebanyak 1 [3].
+Operator adalah simbol yang memerintahkan kompiler untuk melakukan manipulasi data atau perhitungan.
+Operator Aritmatika: Penjumlahan (+), pengurangan (-), perkalian (*), dan pembagian (/) yang digunakan dalam operasi matriks serta perhitungan rata-rata.
+Operator Relasi dan Logika: Operator relasi (<, >, ==, !=) dipakai dalam fungsi pencarian nilai minimum/maksimum serta pengecekan menu.
+Operator Increment (++): Digunakan pada struktur perulangan (nested loop maupun perulangan for) untuk menaikkan indeks iterasi sebanyak 1.
 
-### E. Kondisional dan Perulangan<br/>
-Untuk mengambil keputusan, C++ menyediakan pernyataan `if`, `if-else`, dan `switch` [3]. Untuk mengulang suatu proses, C++ menyediakan `for`, `while`, dan `do...while`, dan setiap perulangan harus punya kondisi berhenti [3].
-#### 1. if dan if-else
-Pernyataan `if` menjalankan perintah hanya jika kondisinya benar, dan `else` menjalankan perintah lain jika kondisinya salah [3].
-#### 2. switch
-`switch` dirancang khusus untuk pengambilan keputusan dengan banyak alternatif. Setiap `case` biasanya diakhiri `break`, dan `default` dijalankan bila tidak ada `case` yang cocok [3].
-#### 3. for, while, dan do...while
-Perulangan `for` cocok saat jumlah pengulangan sudah diketahui, `while` memeriksa kondisi di awal, sedangkan `do...while` memeriksa kondisi di akhir sehingga pasti berjalan minimal satu kali [3].
+### E. Kondisional, Perulangan, Pointer, dan Reference<br/>
+Percabangan if-else dan switch-case: if-else menyeleksi kondisi nilai (seperti pembanding minimum/maksimum), sedangkan switch-case dirancang untuk menu interaktif dengan banyak alternatif pilihan, diakhiri break serta opsi default.Perulangan (for, do-while): for digunakan untuk menelusuri elemen array/matriks, sedangkan do-while membungkus menu agar program minimal berjalan sekali hingga pengguna memilih keluar.Pointer (*) dan Reference (&): Pointer menyimpan alamat memori dengan operator & dan dereferensi *, sedangkan reference (&) menjadi alias variabel agar fungsi dapat mengubah nilai asli secara langsung (pass-by-reference).   Fungsi dan Prosedur: Fungsi mengembalikan nilai dengan return (misal cariMinimum()), sedangkan prosedur menggunakan tipe void tanpa pengembalian nilai langsung (misal hitungRataRata()).
 
 ## Unguided 
 
@@ -102,8 +77,7 @@ int main() {
 }
 ```
 ### Output Unguided 1 : 
-<img width="1103" height="345" alt="Screenshot 2026-09-30 231137.png" src="(https://github.com/Ajarr16FAz/Laprak-Strukdat-modul2.md/blob/main/Screenshot%202026-09-30%20231137.png)" />
-
+<img width="1160" height="470" alt="Screenshot 2026-09-30 231137" src="https://github.com/user-attachments/assets/38143458-8ee0-4916-9e4f-f309d447850e" />
 
 Program ini menggunakan array 2 dimensi berukuran 3x3. Penjumlahan dan pengurangan dilakukan dengan mengoperasikan elemen pada indeks yang sama ($[i][j]$). Sementara itu, perkalian matriks menggunakan tiga perulangan (nested loop) untuk menghitung hasil kali baris dan kolom.
 
@@ -142,6 +116,7 @@ int main() {
 ```
 ### Output Unguided 2 :
 
+<img width="1470" height="312" alt="Screenshot 2026-09-30 231350" src="https://github.com/user-attachments/assets/ef4ddcab-adfb-4a54-ade7-affeb5253588" />
 
 Program ini mendemonstrasikan dua cara melewatkan parameter, yaitu pointer (menggunakan tanda * dan mengirim alamat memori dengan &) serta reference (menggunakan tanda & pada parameter fungsi). Logika penukarannya menggeser nilai secara siklikal: nilai a disimpan ke temp, a diubah menjadi b, b menjadi c, dan c menjadi nilai temp.
 
@@ -226,7 +201,7 @@ int main() {
 }
 ```
 ### Output Unguided 3 :
-
+<img width="1077" height="913" alt="Screenshot 2026-09-30 231534" src="https://github.com/user-attachments/assets/b7d1b6a3-b27d-41a9-bd68-0d26488cb745" />
 
 
 Program ini menggunakan array satu dimensi arrA. Terdapat fungsi cariMinimum dan cariMaksimum yang mengembalikan nilai bertipe int, serta prosedur hitungRataRata (menggunakan tipe void) untuk menampilkan hasil perhitungan rata-rata. Seluruh fungsionalitas diakses secara interaktif menggunakan kontrol menu switch-case di dalam perulangan do-while.
