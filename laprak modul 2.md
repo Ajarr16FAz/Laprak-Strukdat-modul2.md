@@ -101,8 +101,8 @@ int main() {
     return 0;
 }
 ```
-### Output Unguided 1 :
-
+### Output Unguided 1 : 
+<img width="1103" height="345" alt="Screenshot 2026-09-28 212113" src="https://github.com/user-attachments/assets/4a5b5be1-e812-4bae-abb1-12c71d7f3fbc" />
 
 
 Program ini menggunakan array 2 dimensi berukuran 3x3. Penjumlahan dan pengurangan dilakukan dengan mengoperasikan elemen pada indeks yang sama ($[i][j]$). Sementara itu, perkalian matriks menggunakan tiga perulangan (nested loop) untuk menghitung hasil kali baris dan kolom.
