@@ -102,7 +102,7 @@ int main() {
 }
 ```
 ### Output Unguided 1 : 
-<img width="1103" height="345" alt="Screenshot 2026-09-28 212113" src="https://github.com/user-attachments/assets/4a5b5be1-e812-4bae-abb1-12c71d7f3fbc" />
+<img width="1103" height="345" alt="Screenshot 2026-09-30 231137.png" src="(https://github.com/Ajarr16FAz/Laprak-Strukdat-modul2.md/blob/main/Screenshot%202026-09-30%20231137.png)" />
 
 
 Program ini menggunakan array 2 dimensi berukuran 3x3. Penjumlahan dan pengurangan dilakukan dengan mengoperasikan elemen pada indeks yang sama ($[i][j]$). Sementara itu, perkalian matriks menggunakan tiga perulangan (nested loop) untuk menghitung hasil kali baris dan kolom.
